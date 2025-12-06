@@ -13,8 +13,8 @@ RUN yum -y update
 RUN yum install -y httpd
 
 # Copy the app + dependencies inside the container
-COPY index.html /var/www/html
-COPY recipe-styles.css /var/www/html
+COPY ./webapp /var/www/html
+
 
 # Port on which the container should listen on
 EXPOSE 80
